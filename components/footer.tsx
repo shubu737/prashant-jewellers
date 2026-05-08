@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="max-w-sm text-sm leading-6 text-gray-600">
-              Purity is our priority. Serving Rawatbhata and Chittorgarh with premium gold and diamond jewellery since 1957.
+              Purity is our priority. Serving Rawatbhata with premium gold and diamond jewellery since 1957.
             </p>
             <div className="mt-5 space-y-1 text-sm text-gray-500">
               <p>Shop No. 2, Shopping Complex</p>
