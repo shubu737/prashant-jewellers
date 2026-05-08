@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Rates from "./rates";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -15,8 +16,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
+    <>
+      <Rates />
+      <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
@@ -96,22 +99,23 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-4 border-t border-gray-200 flex flex-col gap-3">
+          <div className="pt-4 border-t border-gray-200 flex items-center gap-3">
             <a
               href="tel:+917597441777"
-              className="rounded-full border border-gray-300 py-3 text-sm font-medium text-black text-center hover:bg-gray-50 transition"
+              className="flex-1 text-center rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-black hover:bg-gray-50 transition"
             >
-              Call +91 75974 41777
+              Call
             </a>
             <a
               href="https://wa.me/917597441777?text=Hi,+I+am+interested+in+your+jewellery+collection"
-              className="rounded-full bg-black py-3 text-sm font-semibold text-white text-center hover:bg-gray-800 transition"
+              className="flex-1 text-center rounded-full bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 transition"
             >
-              WhatsApp Us
+              WhatsApp
             </a>
           </div>
         </div>
       )}
     </header>
+    </>
   );
 }

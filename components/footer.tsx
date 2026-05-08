@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-4">
+        <div className="grid gap-8 lg:grid-cols-5">
 
           {/* Brand info */}
           <div className="lg:col-span-2">
@@ -36,27 +36,34 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* Get to know us */}
           <div className="space-y-4">
-            <p className="font-medium text-black">Quick Links</p>
+            <p className="font-medium text-black">Get to know us</p>
             <div className="flex flex-col gap-3 text-sm text-gray-600">
-              <Link href="/shop" className="hover:text-black transition">Shop</Link>
-              <Link href="/about" className="hover:text-black transition">About</Link>
-              <Link href="/contact" className="hover:text-black transition">Contact</Link>
+              <Link href="/about" className="hover:text-black transition">About Us</Link>
+              <Link href="/shop" className="hover:text-black transition">Collections</Link>
+              <Link href="/shop" className="hover:text-black transition">Bridal Collections</Link>
             </div>
           </div>
 
-          {/* Contact */}
+          {/* Our policies */}
           <div className="space-y-4">
-            <p className="font-medium text-black">Get in Touch</p>
+            <p className="font-medium text-black">Our policies</p>
             <div className="flex flex-col gap-3 text-sm text-gray-600">
-              <a href="tel:+917597441777" className="hover:text-black transition">+91 75974 41777</a>
-              <a
-                href="https://wa.me/917597441777?text=Hi,+I+am+interested+in+your+jewellery+collection"
-                className="hover:text-black transition"
-              >
-                WhatsApp Us
-              </a>
+              <Link href="/privacy-policy" className="hover:text-black transition">Privacy Policy</Link>
+              <Link href="/shipping-policy" className="hover:text-black transition">Shipping Policy</Link>
+              <Link href="/payment-terms" className="hover:text-black transition">Payment Methods & T&C</Link>
+              <Link href="/refund-policy" className="hover:text-black transition">Refund, Cancellation & Exchange</Link>
+            </div>
+          </div>
+
+          {/* Let us help you */}
+          <div className="space-y-4">
+            <p className="font-medium text-black">Let us help you</p>
+            <div className="flex flex-col gap-3 text-sm text-gray-600">
+              <Link href="/contact" className="hover:text-black transition">Contact Us</Link>
+              <Link href="/terms" className="hover:text-black transition">Terms & Condition</Link>
+              <Link href="/faq" className="hover:text-black transition">FAQ</Link>
             </div>
           </div>
 

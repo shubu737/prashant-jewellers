@@ -13,7 +13,7 @@ export const products: Product[] = [
   {
     slug: "royal-diamond-ring",
     name: "Royal Diamond Solitaire",
-    category: "Rings",
+    category: "Diamond Rings",
     price: "₹68,000",
     priceValue: 68000,
     description: "Exquisite solitaire diamond ring with elegant rose gold band. Perfect for engagements and special occasions.",
@@ -32,7 +32,7 @@ export const products: Product[] = [
   {
     slug: "emerald-gold-ring",
     name: "Emerald Gold Ring",
-    category: "Rings",
+    category: "Gold Rings",
     price: "₹45,000",
     priceValue: 45000,
     description: "Stunning emerald stone set in 22K gold with ornate detailing. A sophisticated choice for everyday elegance.",
@@ -49,206 +49,85 @@ export const products: Product[] = [
     ]
   },
   {
-    slug: "ruby-wedding-ring",
-    name: "Ruby Wedding Band",
-    category: "Rings",
-    price: "₹55,000",
-    priceValue: 55000,
-    description: "Classic ruby and gold wedding ring with timeless appeal. Symbolizes eternal love and commitment.",
-    details: [
-      "22K gold",
-      "Burmese ruby",
-      "Diamond accents",
-      "Certificate of authenticity"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "traditional-gold-necklace",
-    name: "Temple Gold Necklace",
-    category: "Necklaces",
+    slug: "antique-gold-necklace",
+    name: "Antique Gold Necklace",
+    category: "Gold Necklaces",
     price: "₹1,25,000",
     priceValue: 125000,
-    description: "Authentic temple design necklace with intricate carvings and traditional Rajasthani motifs.",
+    description: "Traditional antique gold necklace with intricate craftsmanship and timeless design.",
     details: [
-      "22K pure gold",
-      "Temple design",
-      "Handcrafted details",
-      "30 grams approximately"
+      "22K yellow gold",
+      "Antique finish",
+      "Length: 18 inches",
+      "BIS hallmarked"
     ],
     images: [
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "diamond-chain-necklace",
-    name: "Diamond Chain Necklace",
-    category: "Necklaces",
-    price: "₹95,000",
-    priceValue: 95000,
-    description: "Delicate diamond-studded chain in 18K white gold. Perfect for weddings and formal events.",
-    details: [
-      "18K white gold",
-      "VS diamonds",
-      "2.5 carats total",
-      "18-inch length"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "pearl-pendant-necklace",
-    name: "Pearl Pendant Necklace",
-    category: "Necklaces",
-    price: "₹38,500",
-    priceValue: 38500,
-    description: "Elegant freshwater pearl pendant with gold frame. A sophisticated choice for daily wear.",
-    details: [
-      "22K gold plated",
-      "Natural pearl",
-      "Modern pendant design",
-      "16-inch chain"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1611652022419-52c8c05c85bc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
   },
   {
-    slug: "modern-gold-hoops",
-    name: "Modern Gold Hoops",
-    category: "Earrings",
-    price: "₹22,500",
-    priceValue: 22500,
-    description: "Contemporary gold hoops with a polished finish. Perfect for both casual and formal occasions.",
+    slug: "silver-bracelet",
+    name: "Sterling Silver Bracelet",
+    category: "Silver Bracelets",
+    price: "₹8,500",
+    priceValue: 8500,
+    description: "Elegant sterling silver bracelet with modern design. Perfect for daily wear.",
     details: [
-      "22K gold",
-      "Large hoop design",
-      "Lightweight",
-      "Push-back closure"
+      "925 sterling silver",
+      "Width: 6mm",
+      "Adjustable clasp",
+      "Hypoallergenic"
     ],
     images: [
-      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "diamond-stud-earrings",
-    name: "Diamond Stud Earrings",
-    category: "Earrings",
-    price: "₹75,000",
-    priceValue: 75000,
-    description: "Classic diamond studs in 18K white gold. A timeless investment piece that complements any style.",
-    details: [
-      "18K white gold",
-      "1 carat diamonds",
-      "VS clarity",
-      "Certified authentic"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "pearl-drop-earrings",
-    name: "Pearl Drop Earrings",
-    category: "Earrings",
-    price: "₹28,000",
-    priceValue: 28000,
-    description: "Elegant pearl drops with gold accents. Ideal for weddings, festivities, and special events.",
-    details: [
-      "22K gold frame",
-      "Natural pearls",
-      "Traditional design",
-      "Comfortable wear"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1200&q=80"
-    ]
-  },
-  {
-    slug: "heritage-gold-bangle",
-    name: "Heritage Gold Bangle",
-    category: "Bangles",
-    price: "₹48,000",
-    priceValue: 48000,
-    description: "Exquisite bangle with traditional carvings and ornate detailing. A staple for Indian weddings.",
-    details: [
-      "22K gold",
-      "Traditional carved design",
-      "Comfort fit opening",
-      "32mm width"
-    ],
-    images: [
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
   },
   {
-    slug: "diamond-bangle-bracelet",
-    name: "Diamond Bangle Bracelet",
-    category: "Bangles",
-    price: "₹1,85,000",
-    priceValue: 185000,
-    description: "Luxurious bangle bracelet studded with VS diamonds. Perfect for celebrations and formal wear.",
+    slug: "diamond-earrings",
+    name: "Diamond Stud Earrings",
+    category: "Diamond Earrings",
+    price: "₹95,000",
+    priceValue: 95000,
+    description: "Classic diamond stud earrings with brilliant cut diamonds in white gold setting.",
     details: [
       "18K white gold",
-      "3 carats diamonds",
-      "VS clarity",
-      "Hinged clasp"
+      "0.5 carat total diamonds",
+      "Round brilliant cut",
+      "Screw back closure"
     ],
     images: [
-      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1611652022419-52c8c05c85bc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
   },
   {
-    slug: "ruby-gold-bangle",
-    name: "Ruby Gold Bangle",
-    category: "Bangles",
-    price: "₹65,000",
-    priceValue: 65000,
-    description: "Stunning bangle featuring Burmese rubies with gold accents. Perfect for any occasion.",
+    slug: "gold-coin-1gm",
+    name: "1 Gram Gold Coin",
+    category: "Gold Coins",
+    price: "₹6,500",
+    priceValue: 6500,
+    description: "Pure 24K gold coin perfect for investment and gifting.",
     details: [
-      "22K gold",
-      "Natural rubies",
-      "Diamond studded",
-      "Traditional design"
+      "24K pure gold",
+      "Weight: 1 gram",
+      "Investment grade",
+      "Certificate included"
     ],
     images: [
-      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
   }
 ];
 
-export const categories = ["All", "Rings", "Necklaces", "Earrings", "Bangles"];
+export const categories = Array.from(new Set(products.map(product => product.category)));
 
-export function getProductBySlug(slug: string) {
-  return products.find((product) => product.slug === slug);
-}
-
-export function getProductsByCategory(category: string) {
-  if (category === "All") {
-    return products;
-  }
-  return products.filter((product) => product.category === category);
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find(product => product.slug === slug);
 }

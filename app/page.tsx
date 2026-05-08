@@ -10,16 +10,46 @@ const featured = [products[0], products[1], products[2]];
 const bestSellers = [products[2], products[0], products[3]];
 
 const collections = [
-  { title: "Rings", subtitle: "Bold and timeless designs." },
-  { title: "Necklaces", subtitle: "Elegant chains for modern style." },
-  { title: "Earrings", subtitle: "Delicate luxury for every day." },
-  { title: "Bangles", subtitle: "Comfort with a premium finish." },
+  { title: "Gold Jewellery", subtitle: "22K & 18K gold with BIS hallmark." },
+  { title: "Diamond Jewellery", subtitle: "Certified diamonds for brilliance." },
+  { title: "Silver Jewellery", subtitle: "Sterling silver and traditional pieces." },
+  { title: "Coins & Bars", subtitle: "Pure gold and silver for investment." },
 ];
 
 export default function HomePage() {
   return (
     <div className="overflow-hidden bg-white">
       <Hero />
+
+      {/* Exclusive Offers */}
+      <section className="bg-gradient-to-r from-yellow-50 to-orange-50 py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
+              Exclusive Offers
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Explore exclusive gold, diamond, and silver jewellery offers with the lowest making charges and special discounts.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featured.map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/shop"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
+            >
+              View All Exclusive Offers
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Featured collection */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
@@ -92,6 +122,86 @@ export default function HomePage() {
           {bestSellers.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
+        </div>
+      </section>
+
+      {/* Gifts For Everyone */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
+              Gifts For Everyone
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Ship it directly to your friends or loved ones and they'll receive a special gift from us, too!
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="text-center">
+              <div className="bg-yellow-100 rounded-2xl p-8 mb-6">
+                <h3 className="text-xl font-semibold text-black mb-4">Gold Gifts</h3>
+                <p className="text-gray-600 mb-6">From minimal gold accents to statement pieces.</p>
+                <div className="space-y-2">
+                  <Link href="/gold-gifts/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
+                  <Link href="/gold-gifts/under-20000" className="block text-sm text-gray-500 hover:text-black">Under ₹20,000</Link>
+                  <Link href="/gold-gifts/under-50000" className="block text-sm text-gray-500 hover:text-black">Under ₹50,000</Link>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-gray-100 rounded-2xl p-8 mb-6">
+                <h3 className="text-xl font-semibold text-black mb-4">Silver Gifts</h3>
+                <p className="text-gray-600 mb-6">Traditional silver gifts for every occasion.</p>
+                <div className="space-y-2">
+                  <Link href="/silver-gifts/under-1000" className="block text-sm text-gray-500 hover:text-black">Under ₹1,000</Link>
+                  <Link href="/silver-gifts/under-5000" className="block text-sm text-gray-500 hover:text-black">Under ₹5,000</Link>
+                  <Link href="/silver-gifts/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-2xl p-8 mb-6">
+                <h3 className="text-xl font-semibold text-black mb-4">Coins</h3>
+                <p className="text-gray-600 mb-6">Perfect gifts for investment and gifting.</p>
+                <div className="space-y-2">
+                  <Link href="/coins/under-1000" className="block text-sm text-gray-500 hover:text-black">Under ₹1,000</Link>
+                  <Link href="/coins/under-5000" className="block text-sm text-gray-500 hover:text-black">Under ₹5,000</Link>
+                  <Link href="/coins/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Jewellery Collections */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
+              Jewellery Collections
+            </h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="group cursor-pointer">
+              <div className="bg-gradient-to-br from-amber-100 to-yellow-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-black mb-4">Antique Collection</h3>
+                <p className="text-gray-600">Timeless elegance with traditional antique designs.</p>
+              </div>
+            </div>
+            <div className="group cursor-pointer">
+              <div className="bg-gradient-to-br from-blue-100 to-cyan-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-black mb-4">Diamond Collection</h3>
+                <p className="text-gray-600">Certified diamonds with exceptional brilliance.</p>
+              </div>
+            </div>
+            <div className="group cursor-pointer">
+              <div className="bg-gradient-to-br from-gray-100 to-slate-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-black mb-4">Silver Collection</h3>
+                <p className="text-gray-600">Sterling silver and traditional silver jewellery.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -173,6 +283,57 @@ export default function HomePage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+      </section>
+
+      {/* Gold Plans */}
+      <section className="bg-yellow-50 py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 text-center">
+          <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl mb-4">
+            Gold Plans
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Save for your future with our flexible gold saving plans.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-4 text-sm font-semibold text-white hover:bg-gray-800 transition"
+            >
+              Book My Gold
+            </Link>
+            <Link
+              href="/shop"
+              className="inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-sm font-semibold text-black hover:bg-gray-50 transition"
+            >
+              View Plans
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-black mb-2">What types of gold jewellery does Prashant Jewellers offer?</h3>
+              <p className="text-gray-600">We offer a refined collection of gold, diamond, and silver jewellery including bridal jewellery, antique designs, and modern gold pieces.</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-black mb-2">Do you offer BIS hallmarked gold jewellery?</h3>
+              <p className="text-gray-600">Yes, all our gold jewellery is BIS 916 hallmarked with HUID for guaranteed purity and authenticity.</p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-black mb-2">Can I buy jewellery online?</h3>
+              <p className="text-gray-600">Yes, you can browse and purchase our jewellery online with secure payments and trusted delivery.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Final CTA */}

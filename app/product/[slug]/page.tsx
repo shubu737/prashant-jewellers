@@ -3,7 +3,7 @@ import Link from "next/link";
 import SectionHeading from "../../../components/section-heading";
 import { getProductBySlug, products } from "../../../lib/products";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));

@@ -35,7 +35,7 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl font-serif tracking-tight text-black sm:text-6xl">
-              Global luxury, local store experience.
+              Global luxury experience.
             </h1>
 
             <p className="max-w-xl text-lg leading-8 text-gray-600">
