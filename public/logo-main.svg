@@ -1,0 +1,12 @@
+<svg width="150" height="180" viewBox="0 0 150 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle (optional, for navbar) -->
+  <circle cx="75" cy="75" r="70" fill="#2B1F1B" opacity="0.05"/>
+  
+  <!-- P Monogram placeholder - this should be replaced with your actual logo -->
+  <text x="75" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#D4AF37">P</text>
+  
+  <!-- Brand text -->
+  <text x="75" y="125" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="600" fill="#D4AF37">PRASHANT</text>
+  <text x="75" y="145" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#D4AF37">JEWELLERS</text>
+  <text x="75" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#D4AF37" opacity="0.8">SINCE 1957</text>
+</svg>
