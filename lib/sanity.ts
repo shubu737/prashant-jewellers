@@ -8,18 +8,20 @@ const apiVersion = process.env.SANITY_API_VERSION || "2025-01-01";
 
 export const isSanityConfigured = Boolean(projectId && dataset);
 
-export const sanityClient = createClient({
-  projectId: projectId ?? "",
-  dataset,
-  apiVersion,
-  useCdn: process.env.NODE_ENV === "production",
-  ignoreBrowserTokenWarning: true,
-});
+export const sanityClient = isSanityConfigured
+  ? createClient({
+      projectId: projectId,
+      dataset,
+      apiVersion,
+      useCdn: process.env.NODE_ENV === "production",
+      ignoreBrowserTokenWarning: true,
+    })
+  : null;
 
-const builder = imageUrlBuilder(sanityClient);
+const builder = sanityClient ? imageUrlBuilder(sanityClient) : null;
 
 export function urlFor(source: SanityImageSource | null | undefined) {
-  if (!source) {
+  if (!source || !builder) {
     return "";
   }
 

@@ -156,7 +156,7 @@ function mapSanityProduct(item: SanityProduct): Product {
 }
 
 export async function getProducts(): Promise<Product[]> {
-  if (!isSanityConfigured) {
+  if (!isSanityConfigured || !sanityClient) {
     return defaultProducts;
   }
 
@@ -181,7 +181,7 @@ export async function getProducts(): Promise<Product[]> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | undefined> {
-  if (!isSanityConfigured) {
+  if (!isSanityConfigured || !sanityClient) {
     return defaultProducts.find((product) => product.slug === slug);
   }
 
