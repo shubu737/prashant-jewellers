@@ -1,3 +1,5 @@
+import { isSanityConfigured, sanityClient, urlFor } from "./sanity";
+
 export type Product = {
   slug: string;
   name: string;
@@ -7,6 +9,18 @@ export type Product = {
   description: string;
   details: string[];
   images: string[];
+};
+
+type SanityProduct = {
+  _id: string;
+  name: string;
+  category: string;
+  price: string;
+  priceValue: number;
+  description: string;
+  details: string[];
+  slug: { current: string };
+  images?: Array<Record<string, unknown>>;
 };
 
 export const products: Product[] = [
@@ -126,8 +140,79 @@ export const products: Product[] = [
   }
 ];
 
-export const categories = Array.from(new Set(products.map(product => product.category)));
+const defaultProducts = products;
 
-export function getProductBySlug(slug: string): Product | undefined {
-  return products.find(product => product.slug === slug);
+function mapSanityProduct(item: SanityProduct): Product {
+  return {
+    slug: item.slug?.current ?? "",
+    name: item.name,
+    category: item.category,
+    price: item.price,
+    priceValue: item.priceValue,
+    description: item.description,
+    details: item.details ?? [],
+    images: Array.isArray(item.images) ? item.images.map(urlFor).filter(Boolean) as string[] : [],
+  };
+}
+
+export async function getProducts(): Promise<Product[]> {
+  if (!isSanityConfigured) {
+    return defaultProducts;
+  }
+
+  try {
+    const query = `*[_type == "product" && defined(slug.current)] {
+      name,
+      category,
+      price,
+      priceValue,
+      description,
+      details,
+      slug,
+      images
+    }`;
+
+    const sanityProducts = await sanityClient.fetch<SanityProduct[]>(query);
+    const mapped = sanityProducts.map(mapSanityProduct).filter((product) => product.slug);
+    return mapped.length > 0 ? mapped : defaultProducts;
+  } catch {
+    return defaultProducts;
+  }
+}
+
+export async function getProductBySlug(slug: string): Promise<Product | undefined> {
+  if (!isSanityConfigured) {
+    return defaultProducts.find((product) => product.slug === slug);
+  }
+
+  try {
+    const query = `*[_type == "product" && slug.current == $slug][0] {
+      name,
+      category,
+      price,
+      priceValue,
+      description,
+      details,
+      slug,
+      images
+    }`;
+
+    const result = await sanityClient.fetch<SanityProduct | null>(query, { slug });
+    if (result?.slug?.current) {
+      return mapSanityProduct(result);
+    }
+    return defaultProducts.find((product) => product.slug === slug);
+  } catch {
+    return defaultProducts.find((product) => product.slug === slug);
+  }
+}
+
+export async function getProductSlugs(): Promise<{ slug: string }[]> {
+  const products = await getProducts();
+  return products.map((product) => ({ slug: product.slug }));
+}
+
+export async function getProductCategories(): Promise<string[]> {
+  const products = await getProducts();
+  return Array.from(new Set(products.map((product) => product.category)));
 }

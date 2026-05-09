@@ -1,24 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "../../../components/section-heading";
-import { getProductBySlug, products } from "../../../lib/products";
+import { getProductBySlug, getProductSlugs } from "../../../lib/products";
 
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return products.map((product) => ({ slug: product.slug }));
+export async function generateStaticParams() {
+  return await getProductSlugs();
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug);
+  const product = await getProductBySlug(params.slug);
   return {
     title: product ? `${product.name} | Prashant Jewellers` : "Product | Prashant Jewellers",
     description: product ? product.description : "Discover luxury jewellery."
   };
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductPage({ params }: { params: { slug: string } }) {
+  const product = await getProductBySlug(params.slug);
 
   if (!product) {
     return <div className="p-20 text-center text-slate-600">Product not found.</div>;

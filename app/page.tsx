@@ -3,11 +3,8 @@ import SectionHeading from "../components/section-heading";
 import ProductCard from "../components/product-card";
 import TestimonialCard from "../components/testimonial-card";
 import Link from "next/link";
-import { products } from "../lib/products";
+import { getProducts } from "../lib/products";
 import { googleReviews, averageRating, totalReviews, GOOGLE_MAPS_URL } from "../lib/google-reviews";
-
-const featured = [products[0], products[1], products[2]];
-const bestSellers = [products[2], products[0], products[3]];
 
 const collections = [
   { title: "Gold Jewellery", subtitle: "22K & 18K gold with BIS hallmark." },
@@ -16,7 +13,11 @@ const collections = [
   { title: "Coins & Bars", subtitle: "Pure gold and silver for investment." },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
+  const featured = products.slice(0, 3);
+  const bestSellers = products.slice(2, 5);
+
   return (
     <div className="overflow-hidden bg-white">
       <Hero />

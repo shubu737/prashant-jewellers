@@ -30,6 +30,26 @@ Luxury jewellery showcase website built with Next.js App Router and Tailwind CSS
 
 Deploy to Vercel from this folder. Vercel detects Next.js automatically.
 
+## Sanity CMS Setup
+
+1. Create a Sanity project and dataset at https://www.sanity.io/manage.
+2. Add a `product` schema like the template in `sanity/schemas/product.ts`.
+3. In the Sanity Studio, create product documents with:
+   - `name`
+   - `slug`
+   - `category`
+   - `price`
+   - `priceValue`
+   - `description`
+   - `details`
+   - `images`
+4. Set these environment variables for the Next.js app:
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID`
+   - `NEXT_PUBLIC_SANITY_DATASET`
+   - `SANITY_API_VERSION=2025-01-01`
+
+If Sanity is not configured, the site will fall back to the built-in local product data.
+
 ## Folder structure
 
 - `app/` – Next.js App Router pages and layout

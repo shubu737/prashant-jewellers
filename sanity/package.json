@@ -1,0 +1,14 @@
+{
+  "name": "prashant-jewellers-studio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sanity start",
+    "build": "sanity build",
+    "start": "sanity serve"
+  },
+  "dependencies": {
+    "@sanity/vision": "^4.0.0",
+    "sanity": "^5.24.0"
+  }
+}
