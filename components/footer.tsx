@@ -1,17 +1,51 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const footerLinks = {
+  "Explore": [
+    { label: "Home",              href: "/" },
+    { label: "Shop Collection",   href: "/shop" },
+    { label: "About Us",          href: "/about" },
+    { label: "Contact",           href: "/contact" },
+  ],
+  "Policies": [
+    { label: "Privacy Policy",            href: "/privacy-policy" },
+    { label: "Shipping Policy",           href: "/shipping-policy" },
+    { label: "Refund & Exchange",         href: "/refund-policy" },
+    { label: "Payment Terms",             href: "/payment-terms" },
+  ],
+  "Support": [
+    { label: "FAQ",               href: "/faq" },
+    { label: "Terms & Conditions",href: "/terms" },
+    { label: "Bridal Collections",href: "/shop" },
+    { label: "Custom Crafting",   href: "/contact" },
+  ],
+};
+
+const contactItems = [
+  { icon: "📍", text: "Shop No. 2, Near Axis Bank, Anu Kiran Colony, Rawatbhata, Rajasthan" },
+  { icon: "📞", text: "+91 75974 41777", href: "tel:+917597441777" },
+  { icon: "✉️", text: "info@prashantjewellers.com", href: "mailto:info@prashantjewellers.com" },
+];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-5">
+    <footer className="bg-[#0a0a0a] text-white">
 
-          {/* Brand info */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="rounded-full p-[2px] bg-gradient-to-br from-[#d4af37] to-[#c49650] shadow-md">
-                <div className="rounded-full bg-white p-[2px]">
+      {/* top gold line */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
+        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+
+          {/* Brand */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-flex items-center gap-3 group">
+              <div className="rounded-full p-[2px] bg-gradient-to-br from-[#d4af37] to-[#c49650] shadow-md group-hover:shadow-[0_0_20px_rgba(196,150,80,0.4)] transition-shadow duration-300">
+                <div className="rounded-full bg-[#0a0a0a] p-[2px]">
                   <Image
                     src="/logo.png.png"
                     alt="Prashant Jewellers"
@@ -22,57 +56,88 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gold">Prashant Jewellers</p>
-                <p className="text-xs text-gray-500">Since 1957</p>
+                <p className="text-sm font-semibold uppercase tracking-widest text-gold">Prashant</p>
+                <p className="text-xs uppercase tracking-widest text-white/40">Jewellers</p>
               </div>
             </Link>
-            <p className="max-w-sm text-sm leading-6 text-gray-600">
+
+            <p className="text-sm leading-7 text-white/50 max-w-xs">
               Purity is our priority. Serving Rawatbhata with premium gold and diamond jewellery since 1957.
             </p>
-            <div className="mt-5 space-y-1 text-sm text-gray-500">
-              <p>Shop No. 2, Shopping Complex</p>
-              <p>Near Axis Bank, Anu Kiran Colony</p>
-              <p>Rawatbhata, Rajasthan</p>
+
+            <div className="space-y-3">
+              {contactItems.map((item) => (
+                <div key={item.text} className="flex items-start gap-3">
+                  <span className="text-sm mt-0.5">{item.icon}</span>
+                  {item.href ? (
+                    <a href={item.href} className="text-sm text-white/50 hover:text-gold transition-colors duration-300">
+                      {item.text}
+                    </a>
+                  ) : (
+                    <p className="text-sm text-white/50">{item.text}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* social / CTA */}
+            <div className="flex gap-3 pt-2">
+              <a
+                href="https://wa.me/917597441777?text=Hi,+I+am+interested+in+your+jewellery+collection"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-gold px-5 py-2.5 text-xs font-semibold text-white hover:bg-[#a07030] hover:shadow-[0_0_20px_rgba(196,150,80,0.4)] transition-all duration-300"
+              >
+                WhatsApp Us
+              </a>
+              <a
+                href="tel:+917597441777"
+                className="rounded-full border border-white/15 px-5 py-2.5 text-xs font-semibold text-white/70 hover:border-gold/50 hover:text-white transition-all duration-300"
+              >
+                Call Now
+              </a>
             </div>
           </div>
 
-          {/* Get to know us */}
-          <div className="space-y-4">
-            <p className="font-medium text-black">Get to know us</p>
-            <div className="flex flex-col gap-3 text-sm text-gray-600">
-              <Link href="/about" className="hover:text-black transition">About Us</Link>
-              <Link href="/shop" className="hover:text-black transition">Collections</Link>
-              <Link href="/shop" className="hover:text-black transition">Bridal Collections</Link>
+          {/* Link columns */}
+          {Object.entries(footerLinks).map(([title, links]) => (
+            <div key={title} className="space-y-5">
+              <div>
+                <p className="text-xs uppercase tracking-[0.35em] text-gold mb-1">{title}</p>
+                <div className="h-px w-8 bg-gradient-to-r from-gold to-transparent mt-2" />
+              </div>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-300"
+                    >
+                      <span className="h-px w-0 bg-gold group-hover:w-3 transition-all duration-300" />
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          {/* Our policies */}
-          <div className="space-y-4">
-            <p className="font-medium text-black">Our policies</p>
-            <div className="flex flex-col gap-3 text-sm text-gray-600">
-              <Link href="/privacy-policy" className="hover:text-black transition">Privacy Policy</Link>
-              <Link href="/shipping-policy" className="hover:text-black transition">Shipping Policy</Link>
-              <Link href="/payment-terms" className="hover:text-black transition">Payment Methods & T&C</Link>
-              <Link href="/refund-policy" className="hover:text-black transition">Refund, Cancellation & Exchange</Link>
-            </div>
-          </div>
-
-          {/* Let us help you */}
-          <div className="space-y-4">
-            <p className="font-medium text-black">Let us help you</p>
-            <div className="flex flex-col gap-3 text-sm text-gray-600">
-              <Link href="/contact" className="hover:text-black transition">Contact Us</Link>
-              <Link href="/terms" className="hover:text-black transition">Terms & Condition</Link>
-              <Link href="/faq" className="hover:text-black transition">FAQ</Link>
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
 
-      <div className="border-t border-gray-200 bg-gray-50 py-5 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Prashant Jewellers. All rights reserved.
+      {/* bottom bar */}
+      <div className="border-t border-white/8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-white/30">
+            © {new Date().getFullYear()} Prashant Jewellers. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2">
+            <span className="text-gold text-xs animate-gold-pulse">✦</span>
+            <p className="text-xs text-white/30 uppercase tracking-widest">Purity is our Priority</p>
+            <span className="text-gold text-xs animate-gold-pulse">✦</span>
+          </div>
+        </div>
       </div>
+
     </footer>
   );
 }
