@@ -21,21 +21,18 @@ export default function FeaturedProductModal({ product, open, onClose }: Props) 
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="relative max-w-5xl w-full overflow-hidden rounded-[2rem] bg-white shadow-premium"
+            className="relative max-w-5xl w-full overflow-hidden rounded-2xl sm:rounded-[2rem] bg-white shadow-premium max-h-[90vh] overflow-y-auto"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.35 }}
           >
-            <button
-              type="button"
-              onClick={onClose}
-              className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-xl font-semibold text-gray-700 shadow-sm"
-            >
+            <button type="button" onClick={onClose}
+              className="sticky top-3 right-3 float-right z-10 inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-xl font-semibold text-gray-700 shadow-sm mr-3 mt-3">
               ×
             </button>
 
-            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] p-6 lg:p-10">
+            <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr] p-4 sm:p-6 lg:p-10">
               <div className="space-y-6">
                 <div className="overflow-hidden rounded-[2rem] bg-gray-100">
                   <img

@@ -53,18 +53,13 @@ export default function GalleryCarousel({ items }: Props) {
   };
 
   return (
-    <motion.section
-      className="py-20"
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.75 }}
-    >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <motion.section className="py-14 sm:py-20" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">Gallery carousel</p>
-            <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
-              Discover our design story in motion.
+            <p className="text-xs uppercase tracking-[0.35em] text-gold">Gallery</p>
+            <h2 className="mt-2 text-2xl sm:text-4xl font-serif tracking-tight text-black">
+              Our design story.
             </h2>
           </div>
           <div className="flex gap-3">
@@ -102,9 +97,9 @@ export default function GalleryCarousel({ items }: Props) {
               key={item.title}
               whileHover={{ y: -8, scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="snap-start flex-shrink-0 w-[85%] sm:w-[48%] lg:w-[31%] rounded-[2rem] bg-gray-100 shadow-soft"
+              className="snap-start flex-shrink-0 w-[80%] sm:w-[48%] lg:w-[31%] rounded-2xl sm:rounded-[2rem] bg-gray-100 shadow-soft"
             >
-              <div className="relative h-80 overflow-hidden rounded-[2rem]">
+              <div className="relative h-56 sm:h-72 overflow-hidden rounded-2xl sm:rounded-[2rem]">
                 <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
               </div>

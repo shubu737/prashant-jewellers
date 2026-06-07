@@ -38,11 +38,11 @@ export default function Footer() {
       {/* top gold line */}
       <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+        <div className="grid gap-10 sm:gap-12 grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
 
           {/* Brand */}
-          <div className="space-y-6">
+          <div className="col-span-2 lg:col-span-1 space-y-5 sm:space-y-6">
             <Link href="/" className="inline-flex items-center gap-3 group">
               <div className="rounded-full p-[2px] bg-gradient-to-br from-[#d4af37] to-[#c49650] shadow-md group-hover:shadow-[0_0_20px_rgba(196,150,80,0.4)] transition-shadow duration-300">
                 <div className="rounded-full bg-[#0a0a0a] p-[2px]">

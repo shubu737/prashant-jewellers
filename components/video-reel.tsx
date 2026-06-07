@@ -36,46 +36,41 @@ export default function VideoReel() {
   const active = reels[activeIndex];
 
   return (
-    <motion.section
-      className="bg-[#fff7ed] py-20"
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.75 }}
-    >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <div className="space-y-8">
+    <motion.section className="bg-[#fff7ed] py-14 sm:py-20" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div className="space-y-6">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <p className="text-sm uppercase tracking-[0.35em] text-gold">Video reel</p>
-              <h2 className="text-4xl font-serif tracking-tight text-black sm:text-5xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-gold">Video reel</p>
+              <h2 className="mt-2 text-3xl sm:text-5xl font-serif tracking-tight text-black">
                 Jewellery stories in motion.
               </h2>
-              <p className="max-w-xl text-lg leading-8 text-gray-600">
+              <p className="mt-3 max-w-xl text-sm sm:text-lg leading-7 sm:leading-8 text-gray-600">
                 Watch short reels highlighting our craft, design details, and the premium finish that makes each piece memorable.
               </p>
             </motion.div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-3 grid-cols-3">
               {reels.map((item, index) => (
                 <motion.button
                   key={item.title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
                   whileHover={{ y: -4 }}
-                  className={`rounded-3xl border p-4 text-left transition ${
+                  className={`rounded-2xl border p-3 text-left transition ${
                     index === activeIndex
                       ? "border-black bg-black text-white shadow-premium"
                       : "border-gray-200 bg-white text-gray-700 hover:border-black"
                   }`}
                 >
-                  <p className="text-sm font-semibold">{item.title}</p>
-                  <p className="mt-2 text-xs leading-5">{item.caption}</p>
+                  <p className="text-xs font-semibold">{item.title}</p>
+                  <p className="mt-1 text-[10px] leading-4 hidden sm:block">{item.caption}</p>
                 </motion.button>
               ))}
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[2.5rem] bg-black shadow-premium">
+          <div className="overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-black shadow-premium">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.video}

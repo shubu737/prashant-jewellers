@@ -69,19 +69,17 @@ export default function Rates() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white py-3">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-300">
-            <span className="font-medium text-white">Live market rates</span>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white/80">
-              Updated {updatedAt}
-            </span>
+    <div className="bg-gray-900 text-white py-2.5 overflow-x-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 text-xs text-gray-300 shrink-0">
+            <span className="font-medium text-white">Live rates</span>
+            {updatedAt && <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] uppercase tracking-widest text-white/70">Updated {updatedAt}</span>}
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-sm">
+          <div className="flex items-center gap-4 sm:gap-6 text-xs overflow-x-auto pb-0.5">
             {rateLabels.map((item, index) => (
-              <div key={item.key} className="flex items-center gap-2">
+              <div key={item.key} className="flex items-center gap-1.5 shrink-0">
                 <span className="font-medium text-gray-200">{item.label}:</span>
                 <motion.span
                   key={rates[item.key]}

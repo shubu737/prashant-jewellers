@@ -20,16 +20,10 @@ export default function DesignGallery({ items }: Props) {
   const gridItems = useMemo(() => items.slice(0, 8), [items]);
 
   return (
-    <motion.section
-      className="bg-white py-20"
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.75 }}
-    >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <SectionHeading title="Product design images" subtitle="A curated gallery of our craftsmanship" />
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <motion.section className="bg-white py-14 sm:py-20" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <SectionHeading title="Design Gallery" subtitle="A curated gallery of our craftsmanship" />
+        <div className="mt-8 sm:mt-12 grid gap-4 grid-cols-2 lg:grid-cols-4">
           {gridItems.map((item) => (
             <motion.button
               key={item.title}
@@ -37,18 +31,14 @@ export default function DesignGallery({ items }: Props) {
               onClick={() => setSelected(item)}
               whileHover={{ y: -6, scale: 1.01 }}
               transition={{ duration: 0.3 }}
-              className="group overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-100 transition hover:shadow-premium"
+              className="group overflow-hidden rounded-xl sm:rounded-[2rem] border border-gray-200 bg-gray-100 transition hover:shadow-premium w-full text-left"
             >
-              <div className="relative h-72 overflow-hidden rounded-[2rem] bg-black">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
+              <div className="relative h-48 sm:h-64 overflow-hidden rounded-xl sm:rounded-[2rem] bg-black">
+                <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="text-sm uppercase tracking-[0.3em] text-white/75">Design image</p>
-                  <p className="mt-3 text-xl font-semibold">{item.title}</p>
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/70">Design</p>
+                  <p className="mt-1 text-sm sm:text-base font-semibold leading-tight">{item.title}</p>
                 </div>
               </div>
             </motion.button>
@@ -79,7 +69,7 @@ export default function DesignGallery({ items }: Props) {
                 ×
               </button>
               <div className="relative w-full overflow-hidden rounded-[2rem] bg-black">
-                <img src={selected.image} alt={selected.title} className="h-[70vh] w-full object-cover" />
+                <img src={selected.image} alt={selected.title} className="h-[50vh] sm:h-[70vh] w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
                   <p className="text-sm uppercase tracking-[0.3em] text-white/70">Design image</p>

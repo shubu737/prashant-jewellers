@@ -47,10 +47,10 @@ export default function ShopBrowser({ initialProducts, categories, priceRanges }
   }, [initialProducts, selectedCategory, selectedPrice, priceRanges]);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20 bg-white">
+    <section className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-20 bg-white">
       <SectionHeading title="Shop Collection" subtitle="Explore luxury jewellery crafted for your signature moments." />
 
-      <div className="mt-12 grid gap-8 xl:grid-cols-[280px_1fr]">
+      <div className="mt-8 sm:mt-12 grid gap-6 xl:grid-cols-[260px_1fr]">
         <FilterPanel
           categories={allCategories}
           priceRanges={priceRanges}
@@ -61,10 +61,7 @@ export default function ShopBrowser({ initialProducts, categories, priceRanges }
         />
 
         <div>
-          <div
-            key={`${selectedCategory}-${selectedPrice}`}
-            className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 animate-fade-in-up"
-          >
+          <div key={`${selectedCategory}-${selectedPrice}`} className="grid gap-4 sm:gap-6 grid-cols-2 xl:grid-cols-3 animate-fade-in-up">
             {loading
               ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
               : filtered.map((product: Product) => (
