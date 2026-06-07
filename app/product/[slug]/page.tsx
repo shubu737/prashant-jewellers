@@ -9,16 +9,18 @@ export async function generateStaticParams() {
   return await getProductSlugs();
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = await getProductBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
   return {
     title: product ? `${product.name} | Prashant Jewellers` : "Product | Prashant Jewellers",
     description: product ? product.description : "Discover luxury jewellery."
   };
 }
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
-  const product = await getProductBySlug(params.slug);
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return <div className="p-20 text-center text-slate-600">Product not found.</div>;
@@ -96,7 +98,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
           </div>
           <div className="rounded-[2rem] overflow-hidden shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80"
+              src="/images/diamond-rings/diamond-rings-9.jpg"
               alt="Jewellery detail"
               width={640}
               height={480}

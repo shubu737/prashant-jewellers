@@ -2,17 +2,44 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", phone: "", message: "" });
-  const [sent, setSent] = useState(false);
+type FormState = {
+  name: string;
+  phone: string;
+  message: string;
+};
 
-  function handleChange(field: string, value: string) {
+export default function ContactForm() {
+  const [form, setForm] = useState<FormState>({ name: "", phone: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  function handleChange(field: keyof FormState, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setStatus("loading");
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const json = await response.json();
+        throw new Error(json.error || "Unable to submit message.");
+      }
+
+      setStatus("success");
+      setForm({ name: "", phone: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Something went wrong.");
+    }
   }
 
   return (
@@ -58,13 +85,17 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-black py-4 text-sm font-semibold text-white hover:bg-gray-800 transition"
+        disabled={status === "loading"}
+        className="mt-6 w-full rounded-full bg-black py-4 text-sm font-semibold text-white hover:bg-gray-800 transition disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Send Message
+        {status === "loading" ? "Sending..." : "Send Message"}
       </button>
 
-      {sent && (
+      {status === "success" && (
         <p className="mt-4 text-sm text-green-700">Thanks! We'll reach out to you shortly.</p>
+      )}
+      {status === "error" && (
+        <p className="mt-4 text-sm text-red-700">{error || "Unable to submit your message."}</p>
       )}
     </form>
   );

@@ -30,9 +30,22 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <div>
+                  <p className="font-semibold text-black text-sm">Email</p>
+                  <a
+                    href="mailto:info@prashantjewellers.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:text-black transition"
+                  >
+                    info@prashantjewellers.com
+                  </a>
+                </div>
+                <div>
                   <p className="font-semibold text-black text-sm">WhatsApp</p>
                   <a
                     href="https://wa.me/917597441777?text=Hi,+I+am+interested+in+your+jewellery+collection"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gold hover:text-black transition"
                   >
                     Chat via WhatsApp

@@ -1,354 +1,293 @@
-import Hero from "../components/hero";
-import SectionHeading from "../components/section-heading";
-import ProductCard from "../components/product-card";
+﻿import Hero from "../components/hero";
 import TestimonialCard from "../components/testimonial-card";
+import SectionHeading from "../components/section-heading";
+import GalleryCarousel from "../components/gallery-carousel";
+import VideoReel from "../components/video-reel";
+import DesignGallery from "../components/design-gallery";
+import FeaturedProductsSection from "../components/featured-products-section";
 import Link from "next/link";
 import { getProducts } from "../lib/products";
-import { googleReviews, averageRating, totalReviews, GOOGLE_MAPS_URL } from "../lib/google-reviews";
 
-const collections = [
-  { title: "Gold Jewellery", subtitle: "22K & 18K gold with BIS hallmark." },
-  { title: "Diamond Jewellery", subtitle: "Certified diamonds for brilliance." },
-  { title: "Silver Jewellery", subtitle: "Sterling silver and traditional pieces." },
-  { title: "Coins & Bars", subtitle: "Pure gold and silver for investment." },
+const signatureCollections = [
+  {
+    title: "Arya 24KT Gold",
+    description: "Premium gold foil gifts made for celebratory ceremonies and refined gifting.",
+    cta: "/shop",
+    image: "/images/gold-coins/gold-coins-2.jpg",
+  },
+  {
+    title: "Momentz Diamond",
+    description: "Elegant diamond jewellery for weddings, anniversaries and milestone events.",
+    cta: "/shop",
+    image: "/images/diamond-earrings/diamond-earrings-3.jpg",
+  },
+  {
+    title: "Kisna Diamond",
+    description: "Radiant diamond creations with precision cuts and timeless shine.",
+    cta: "/shop",
+    image: "/images/diamond-rings/diamond-rings-7.jpg",
+  },
+];
+
+const benefitFeatures = [
+  { title: "BIS Hallmarked", subtitle: "Assured purity in every purchase." },
+  { title: "Lifetime Exchange", subtitle: "Flexible support for your jewellery investment." },
+  { title: "Custom Crafting", subtitle: "Bring your own jewellery vision to life." },
+];
+
+const categories = [
+  { title: "Gold Jewellery", description: "22kt & 18kt designs for weddings and gifting." },
+  { title: "Silver & Oxidized", description: "Contemporary silver styles with classic charm." },
+  { title: "Ameri Diamond", description: "Brilliant pieces with superior clarity and cut." },
+  { title: "Custom Crafting", description: "Design services for bespoke and bridal jewellery." },
+];
+
+const galleryItems = [
+  {
+    image: "/images/gold-necklaces/gold-necklaces-7.jpg",
+    title: "Gold Heritage Necklace",
+    subtitle: "Timeless elegance in every detail.",
+  },
+  {
+    image: "/images/diamond-rings/diamond-rings-9.jpg",
+    title: "Diamond Statement Ring",
+    subtitle: "A modern heirloom carved in brilliance.",
+  },
+  {
+    image: "/images/gold-rings/gold-rings-4.jpg",
+    title: "Intricate Wedding Set",
+    subtitle: "Crafted for celebration and legacy.",
+  },
+  {
+    image: "/images/gold-rings/gold-rings-6.jpg",
+    title: "Luxury Gold Bracelet",
+    subtitle: "Bold design with premium finishing.",
+  },
+  {
+    image: "/images/diamond-earrings/diamond-earrings-5.jpg",
+    title: "Signature Silver Cuff",
+    subtitle: "Modern shine with classic craftsmanship.",
+  },
+  {
+    image: "/images/gold-necklaces/gold-necklaces-8.jpg",
+    title: "Designer Pendant",
+    subtitle: "An elegant piece for every occasion.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Asha Verma",
+    rating: 5,
+    feedback: "The team at Prashant Jewellers helped me choose the perfect wedding set with care and attention. Their craftsmanship is exceptional.",
+    date: "March 2026",
+  },
+  {
+    name: "Rohit Gupta",
+    rating: 5,
+    feedback: "Fast service, honest pricing and beautiful jewellery. I purchased a gold ring and the quality is outstanding.",
+    date: "May 2026",
+  },
+  {
+    name: "Priya Sharma",
+    rating: 4,
+    feedback: "I love the modern silver collection. The staff were very helpful and the final piece was exactly what I wanted.",
+    date: "April 2026",
+  },
 ];
 
 export default async function HomePage() {
   const products = await getProducts();
-  const featured = products.slice(0, 3);
-  const bestSellers = products.slice(2, 5);
+  const featuredProducts = products.slice(0, 4);
 
   return (
     <div className="overflow-hidden bg-white">
       <Hero />
 
-      {/* Exclusive Offers */}
-      <section className="bg-gradient-to-r from-yellow-50 to-orange-50 py-20">
+      <section className="bg-[#fbf6ef] py-20 animate-fade-in-up">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
-              Exclusive Offers
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Explore exclusive gold, diamond, and silver jewellery offers with the lowest making charges and special discounts.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featured.map((product) => (
-              <ProductCard key={product.slug} product={product} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-gold">Timeless Artistry</p>
+              <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
+                Signature Collections
+              </h2>
+            </div>
             <Link
               href="/shop"
-              className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
+              className="inline-flex items-center justify-center rounded-full border border-black bg-black px-7 py-3 text-sm font-semibold text-white hover:bg-gray-900 transition"
             >
-              View All Exclusive Offers
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              Browse all collections
             </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Featured collection */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
-        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Featured collection</p>
-            <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
-              Luxury jewellery curated for you.
-            </h2>
-          </div>
-          <Link
-            href="/shop"
-            className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-black hover:bg-gray-50 transition"
-          >
-            Browse all products
-          </Link>
-        </div>
-        <div className="grid gap-6 xl:grid-cols-3 mt-14">
-          {featured.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
-        </div>
-      </section>
-
-      {/* Shop by collection */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <SectionHeading title="Shop by collection" subtitle="Explore styles crafted for every moment." />
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4 mt-12">
-            {collections.map((col) => (
-              <div key={col.title} className="rounded-2xl border border-gray-200 bg-white p-8 hover:shadow-soft transition">
-                <h3 className="text-xl font-semibold text-black">{col.title}</h3>
-                <p className="mt-4 text-gray-600">{col.subtitle}</p>
-              </div>
+          <div className="grid gap-6 mt-12 md:grid-cols-3">
+            {signatureCollections.map((collection, index) => (
+              <Link
+                key={collection.title}
+                href={collection.cta}
+                className="group overflow-hidden rounded-[2rem] bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-premium"
+              >
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src={collection.image}
+                    alt={collection.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <span className="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gray-700">
+                    0{index + 1}
+                  </span>
+                </div>
+                <div className="space-y-4 px-6 py-7">
+                  <p className="text-xs uppercase tracking-[0.3em] text-gray-500">Exclusive collection</p>
+                  <h3 className="text-2xl font-semibold text-black">{collection.title}</h3>
+                  <p className="text-sm leading-7 text-gray-600">{collection.description}</p>
+                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-gold">
+                    Explore collection
+                    <span aria-hidden="true">→</span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Best sellers */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
-          <div className="space-y-6">
-            <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Best sellers</p>
+      <FeaturedProductsSection products={featuredProducts} />
+
+      <GalleryCarousel items={galleryItems} />
+
+      <VideoReel />
+
+      <DesignGallery items={galleryItems} />
+
+      <section className="bg-[#f5f0e8] py-20 animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-premium">
+            <img
+              src="/images/gold-necklaces/gold-necklaces-1.jpg"
+              alt="Jewellery artisan"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="space-y-8">
+            <p className="text-sm uppercase tracking-[0.35em] text-gold">Since 1957</p>
             <h2 className="text-4xl font-serif tracking-tight text-black sm:text-5xl">
-              Discover our top-rated pieces.
+              The art of Prashant Jewellers
             </h2>
-            <p className="text-base leading-8 text-gray-600">
-              These top-selling jewellery items are favourites for gifting, weddings, and daily luxury. Each piece is selected for its refined design and premium finish.
+            <p className="max-w-xl text-lg leading-8 text-gray-600">
+              Our legacy is built on purity, craftsmanship and personalized service. From a family workshop in Rawatbhata, we now offer premium gold, diamond and silver jewellery designed for generations.
             </p>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-soft">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-500">Crafted with passion</p>
+                <p className="mt-3 text-sm text-gray-600">Every piece is finished by expert artisans for lasting beauty.</p>
+              </div>
+              <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-soft">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-500">Family values</p>
+                <p className="mt-3 text-sm text-gray-600">We combine heritage and trust with modern jewellery design.</p>
+              </div>
+            </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl overflow-hidden bg-gray-100">
+        </div>
+      </section>
+
+      <section className="bg-[#f4ede4] py-20 animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="space-y-8">
+            <p className="text-sm uppercase tracking-[0.35em] text-gold">Founder story</p>
+            <h2 className="text-4xl font-serif tracking-tight text-black sm:text-5xl">
+              A legacy shaped by generations
+            </h2>
+            <p className="text-lg leading-8 text-gray-600">
+              Mr. Krish Soni, the third generation of our jewellery family, carries forward a heritage rooted in artistry, precision and customer trust.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl bg-white p-6 shadow-soft">
+                <p className="text-xs uppercase tracking-[0.35em] text-gray-500">Founder</p>
+                <h3 className="mt-3 text-xl font-semibold text-black">Mr. Krish Soni</h3>
+              </div>
+              <div className="rounded-3xl bg-white p-6 shadow-soft">
+                <p className="text-xs uppercase tracking-[0.35em] text-gray-500">Experience</p>
+                <h3 className="mt-3 text-xl font-semibold text-black">Over 60 years in jewellery</h3>
+              </div>
+            </div>
+          </div>
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-premium">
               <img
-                src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=80"
-                alt="Jewellery collection"
+                src="/images/founder/krish-soni.jpg"
+                alt="Founder Mr. Krish Soni"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
-                alt="Jewellery detail"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
-          {bestSellers.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
         </div>
       </section>
 
-      {/* Gifts For Everyone */}
-      <section className="bg-gray-50 py-20">
+      <section className="py-20 animate-fade-in-up">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
-              Gifts For Everyone
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Ship it directly to your friends or loved ones and they'll receive a special gift from us, too!
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="text-center">
-              <div className="bg-yellow-100 rounded-2xl p-8 mb-6">
-                <h3 className="text-xl font-semibold text-black mb-4">Gold Gifts</h3>
-                <p className="text-gray-600 mb-6">From minimal gold accents to statement pieces.</p>
-                <div className="space-y-2">
-                  <Link href="/gold-gifts/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
-                  <Link href="/gold-gifts/under-20000" className="block text-sm text-gray-500 hover:text-black">Under ₹20,000</Link>
-                  <Link href="/gold-gifts/under-50000" className="block text-sm text-gray-500 hover:text-black">Under ₹50,000</Link>
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="space-y-6">
+              <p className="text-sm uppercase tracking-[0.35em] text-gold">Masterpieces in every metal</p>
+              <h2 className="text-4xl font-serif tracking-tight text-black sm:text-5xl">
+                The royal collection
+              </h2>
+              <p className="max-w-xl text-lg leading-8 text-gray-600">
+                We offer jewellery that blends tradition with contemporary elegance. Every design is curated to become part of your story.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {benefitFeatures.map((feature) => (
+                  <div key={feature.title} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-soft">
+                    <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
+                    <p className="mt-3 text-sm text-gray-600">{feature.subtitle}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {categories.slice(0, 2).map((category) => (
+                <div key={category.title} className="rounded-[2rem] border border-gray-200 bg-[#fdfaf5] p-8 shadow-soft">
+                  <p className="text-sm uppercase tracking-[0.35em] text-gray-500">{category.title}</p>
+                  <h3 className="mt-4 text-2xl font-semibold text-black">{category.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-gray-600">{category.description}</p>
                 </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gray-100 rounded-2xl p-8 mb-6">
-                <h3 className="text-xl font-semibold text-black mb-4">Silver Gifts</h3>
-                <p className="text-gray-600 mb-6">Traditional silver gifts for every occasion.</p>
-                <div className="space-y-2">
-                  <Link href="/silver-gifts/under-1000" className="block text-sm text-gray-500 hover:text-black">Under ₹1,000</Link>
-                  <Link href="/silver-gifts/under-5000" className="block text-sm text-gray-500 hover:text-black">Under ₹5,000</Link>
-                  <Link href="/silver-gifts/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
+              ))}
+              {categories.slice(2).map((category) => (
+                <div key={category.title} className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-soft">
+                  <p className="text-sm uppercase tracking-[0.35em] text-gray-500">{category.title}</p>
+                  <h3 className="mt-4 text-2xl font-semibold text-black">{category.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-gray-600">{category.description}</p>
                 </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-2xl p-8 mb-6">
-                <h3 className="text-xl font-semibold text-black mb-4">Coins</h3>
-                <p className="text-gray-600 mb-6">Perfect gifts for investment and gifting.</p>
-                <div className="space-y-2">
-                  <Link href="/coins/under-1000" className="block text-sm text-gray-500 hover:text-black">Under ₹1,000</Link>
-                  <Link href="/coins/under-5000" className="block text-sm text-gray-500 hover:text-black">Under ₹5,000</Link>
-                  <Link href="/coins/under-10000" className="block text-sm text-gray-500 hover:text-black">Under ₹10,000</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Jewellery Collections */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
-              Jewellery Collections
-            </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-amber-100 to-yellow-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-black mb-4">Antique Collection</h3>
-                <p className="text-gray-600">Timeless elegance with traditional antique designs.</p>
-              </div>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-blue-100 to-cyan-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-black mb-4">Diamond Collection</h3>
-                <p className="text-gray-600">Certified diamonds with exceptional brilliance.</p>
-              </div>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-gray-100 to-slate-200 rounded-2xl p-8 text-center hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-black mb-4">Silver Collection</h3>
-                <p className="text-gray-600">Sterling silver and traditional silver jewellery.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 text-center">
-          <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Why choose Prashant</p>
-          <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
-            Curated jewellery, trusted service.
-          </h2>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 text-left">
-              <p className="text-lg font-semibold text-black">Crafted with care</p>
-              <p className="mt-4 text-gray-600">Every design is chosen and finished with premium attention to detail.</p>
-            </div>
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 text-left">
-              <p className="text-lg font-semibold text-black">Local boutique</p>
-              <p className="mt-4 text-gray-600">A trusted jewellery shop in Rawatbhata offering warm, personalised service.</p>
-            </div>
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 text-left">
-              <p className="text-lg font-semibold text-black">Easy enquiries</p>
-              <p className="mt-4 text-gray-600">Contact us instantly via WhatsApp for styling advice and custom requests.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Google reviews */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20 text-center">
-        <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Google Reviews</p>
-        <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
-          A premium experience from first visit to final purchase.
-        </h2>
-
-        {/* Overall rating badge */}
-        <div className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 px-8 py-4">
-          <div>
-            <p className="text-5xl font-bold text-black">{averageRating.toFixed(1)}</p>
-            <div className="flex gap-0.5 mt-1 justify-center">
-              {[1, 2, 3, 4, 5].map((s) => (
-                <svg
-                  key={s}
-                  className={`w-4 h-4 ${s <= Math.round(averageRating) ? "text-yellow-400" : "text-gray-200"}`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
               ))}
             </div>
-            <p className="text-xs text-gray-500 mt-1">{totalReviews} reviews</p>
-          </div>
-          <div className="h-12 w-px bg-gray-200" />
-          <div className="flex items-center gap-2">
-            <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-            </svg>
-            <span className="text-sm font-medium text-gray-700">Google Reviews</span>
           </div>
         </div>
-
-        <div className="grid gap-6 lg:grid-cols-3 mt-10">
-          {googleReviews.slice(0, 3).map((review) => (
-            <TestimonialCard key={review.name} testimonial={review} />
-          ))}
-        </div>
-
-        <a
-          href={GOOGLE_MAPS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
-        >
-          View all reviews on Google
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
       </section>
 
-      {/* Gold Plans */}
-      <section className="bg-yellow-50 py-20">
+      <section className="bg-[#f4ede4] py-20 animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <SectionHeading title="What our clients say" subtitle="Trusted by local customers" />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 animate-fade-in-up">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 text-center">
-          <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl mb-4">
-            Gold Plans
+          <p className="text-sm uppercase tracking-[0.35em] text-gray-500">Browse more</p>
+          <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
+            Shop the full collection
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Save for your future with our flexible gold saving plans.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/shop"
-              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-4 text-sm font-semibold text-white hover:bg-gray-800 transition"
-            >
-              Book My Gold
-            </Link>
-            <Link
-              href="/shop"
-              className="inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-sm font-semibold text-black hover:bg-gray-50 transition"
-            >
-              View Plans
-            </Link>
-          </div>
+          <Link
+            href="/shop"
+            className="mt-10 inline-flex items-center justify-center rounded-full bg-black px-10 py-4 text-sm font-semibold text-white hover:bg-gray-900 transition"
+          >
+            View all products
+          </Link>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif tracking-tight text-black sm:text-4xl">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          <div className="space-y-6">
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-black mb-2">What types of gold jewellery does Prashant Jewellers offer?</h3>
-              <p className="text-gray-600">We offer a refined collection of gold, diamond, and silver jewellery including bridal jewellery, antique designs, and modern gold pieces.</p>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-black mb-2">Do you offer BIS hallmarked gold jewellery?</h3>
-              <p className="text-gray-600">Yes, all our gold jewellery is BIS 916 hallmarked with HUID for guaranteed purity and authenticity.</p>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-black mb-2">Can I buy jewellery online?</h3>
-              <p className="text-gray-600">Yes, you can browse and purchase our jewellery online with secure payments and trusted delivery.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 pb-24 text-center">
-        <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Ready to shop?</p>
-        <h2 className="mt-4 text-4xl font-serif tracking-tight text-black sm:text-5xl">
-          Explore our curated jewellery collection.
-        </h2>
-        <Link
-          href="/shop"
-          className="mt-8 inline-flex items-center justify-center rounded-full bg-black px-9 py-4 text-sm font-semibold text-white hover:bg-gray-800 transition"
-        >
-          Shop now
-        </Link>
       </section>
     </div>
   );

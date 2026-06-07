@@ -1,4 +1,6 @@
-import Image from "next/image";
+﻿"use client";
+
+import { motion } from "framer-motion";
 
 type Testimonial = {
   name: string;
@@ -27,30 +29,24 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-soft flex flex-col gap-4">
-      {/* Header: profile + Google logo */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="rounded-2xl border border-gray-200 bg-white p-6 shadow-soft flex flex-col gap-4"
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          {testimonial.profileImage ? (
-            <Image
-              src={testimonial.profileImage}
-              alt={testimonial.name}
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-          ) : (
-            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold text-gray-600">
-              {testimonial.name[0]}
-            </div>
-          )}
+          <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold text-gray-600">
+            {testimonial.name[0]}
+          </div>
           <div>
             <p className="font-semibold text-black text-sm">{testimonial.name}</p>
             <p className="text-xs text-gray-400">{testimonial.date}</p>
           </div>
         </div>
 
-        {/* Google logo */}
         <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
           <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
@@ -59,11 +55,9 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
         </svg>
       </div>
 
-      {/* Star rating */}
       <StarRating rating={testimonial.rating} />
 
-      {/* Review text */}
       <p className="text-gray-600 leading-7 text-sm">"{testimonial.feedback}"</p>
-    </div>
+    </motion.div>
   );
 }

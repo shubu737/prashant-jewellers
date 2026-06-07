@@ -23,8 +23,7 @@ type SanityProduct = {
   images?: Array<Record<string, unknown>>;
 };
 
-export const products: Product[
-] = [
+export const products: Product[] = [
   {
     slug: "royal-diamond-solitaire",
     name: "Royal Diamond Solitaire",
@@ -39,11 +38,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/gold-rings/gold-rings-1.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -60,11 +58,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/gold-rings/gold-rings-2.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -81,11 +78,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -102,11 +98,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/gold-rings/gold-rings-4.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -123,11 +118,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/gold-rings/gold-rings-5.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -144,11 +138,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/gold-rings/gold-rings-6.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -165,11 +158,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/gold-rings/gold-rings-7.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -186,11 +178,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/gold-rings/gold-rings-8.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -207,11 +198,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/gold-rings/gold-rings-9.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -228,11 +218,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-rings/diamond-rings-9.jpg",
-      "/images/diamond-rings/diamond-rings-7.jpg",
-      "/images/gold-rings/gold-rings-10.jpg"
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -249,11 +238,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -270,11 +258,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -291,11 +278,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -312,11 +298,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -333,11 +318,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -354,11 +338,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -375,11 +358,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -396,11 +378,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -417,11 +398,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -438,11 +418,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -459,11 +438,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-2.jpg",
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-8.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -480,11 +458,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-8.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -501,11 +478,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-8.jpg",
-      "/images/gold-necklaces/gold-necklaces-2.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -522,11 +498,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-10.jpg",
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-2.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -543,11 +518,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-2.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg",
-      "/images/gold-necklaces/gold-necklaces-7.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -564,11 +538,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-2.jpg",
-      "/images/gold-necklaces/gold-necklaces-8.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -585,11 +558,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-8.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg",
-      "/images/gold-necklaces/gold-necklaces-7.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -606,11 +578,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-10.jpg",
-      "/images/gold-necklaces/gold-necklaces-8.jpg",
-      "/images/gold-necklaces/gold-necklaces-2.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -627,11 +598,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg",
-      "/images/gold-necklaces/gold-necklaces-8.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -648,11 +618,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-necklaces/gold-necklaces-8.jpg",
-      "/images/gold-necklaces/gold-necklaces-7.jpg",
-      "/images/gold-necklaces/gold-necklaces-10.jpg"
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -669,11 +638,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -690,11 +658,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-4.jpg",
-      "/images/gold-rings/gold-rings-5.jpg",
-      "/images/gold-rings/gold-rings-6.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -711,11 +678,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-7.jpg",
-      "/images/gold-rings/gold-rings-8.jpg",
-      "/images/gold-rings/gold-rings-9.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -732,11 +698,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-10.jpg",
-      "/images/gold-rings/gold-rings-1.jpg",
-      "/images/gold-rings/gold-rings-2.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -753,11 +718,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-3.jpg",
-      "/images/gold-rings/gold-rings-4.jpg",
-      "/images/gold-rings/gold-rings-5.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -774,11 +738,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-6.jpg",
-      "/images/gold-rings/gold-rings-7.jpg",
-      "/images/gold-rings/gold-rings-8.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -795,11 +758,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-9.jpg",
-      "/images/gold-rings/gold-rings-10.jpg",
-      "/images/gold-rings/gold-rings-1.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -816,11 +778,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-2.jpg",
-      "/images/gold-rings/gold-rings-3.jpg",
-      "/images/gold-rings/gold-rings-4.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -837,11 +798,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-5.jpg",
-      "/images/gold-rings/gold-rings-6.jpg",
-      "/images/gold-rings/gold-rings-7.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -858,11 +818,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-rings/gold-rings-8.jpg",
-      "/images/gold-rings/gold-rings-9.jpg",
-      "/images/gold-rings/gold-rings-10.jpg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -879,11 +838,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-2.jpg",
-      "/images/diamond-earrings/diamond-earrings-3.jpg",
-      "/images/diamond-earrings/diamond-earrings-5.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -900,11 +858,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-3.jpg",
-      "/images/diamond-earrings/diamond-earrings-5.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -921,11 +878,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-5.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg",
-      "/images/diamond-earrings/diamond-earrings-2.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -942,11 +898,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-7.jpg",
-      "/images/diamond-earrings/diamond-earrings-2.jpg",
-      "/images/diamond-earrings/diamond-earrings-3.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -963,11 +918,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-2.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg",
-      "/images/diamond-earrings/diamond-earrings-5.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -984,11 +938,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-3.jpg",
-      "/images/diamond-earrings/diamond-earrings-2.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1005,11 +958,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-5.jpg",
-      "/images/diamond-earrings/diamond-earrings-3.jpg",
-      "/images/diamond-earrings/diamond-earrings-2.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1026,11 +978,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-7.jpg",
-      "/images/diamond-earrings/diamond-earrings-5.jpg",
-      "/images/diamond-earrings/diamond-earrings-3.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1047,11 +998,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-2.jpg",
-      "/images/diamond-earrings/diamond-earrings-5.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1068,11 +1018,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/diamond-earrings/diamond-earrings-3.jpg",
-      "/images/diamond-earrings/diamond-earrings-7.jpg",
-      "/images/diamond-earrings/diamond-earrings-2.jpg"
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1089,11 +1038,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-2.jpg",
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-7.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1110,11 +1058,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-7.jpg",
-      "/images/gold-coins/gold-coins-8.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1131,11 +1078,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-7.jpg",
-      "/images/gold-coins/gold-coins-8.jpg",
-      "/images/gold-coins/gold-coins-2.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1152,11 +1098,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-8.jpg",
-      "/images/gold-coins/gold-coins-2.jpg",
-      "/images/gold-coins/gold-coins-4.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1173,11 +1118,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-2.jpg",
-      "/images/gold-coins/gold-coins-8.jpg",
-      "/images/gold-coins/gold-coins-7.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1194,11 +1138,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-2.jpg",
-      "/images/gold-coins/gold-coins-8.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1215,11 +1158,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-7.jpg",
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-2.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1236,11 +1178,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-8.jpg",
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-7.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1257,11 +1198,10 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-2.jpg",
-      "/images/gold-coins/gold-coins-7.jpg",
-      "/images/gold-coins/gold-coins-4.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
-
   },
 
   {
@@ -1278,9 +1218,9 @@ export const products: Product[
       "Hallmarked quality"
     ],
     images: [
-      "/images/gold-coins/gold-coins-4.jpg",
-      "/images/gold-coins/gold-coins-8.jpg",
-      "/images/gold-coins/gold-coins-2.jpg"
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=80"
     ]
   },
 
@@ -1360,8 +1300,7 @@ export async function getProductSlugs(): Promise<{ slug: string }[]> {
   return products.map((product) => ({ slug: product.slug }));
 }
 
-export async function getProductCategories(): Promise<string[
-]> {
+export async function getProductCategories(): Promise<string[]> {
   const products = await getProducts();
   return Array.from(new Set(products.map((product) => product.category)));
 }

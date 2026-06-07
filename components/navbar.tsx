@@ -63,7 +63,17 @@ export default function Navbar() {
             Call
           </a>
           <a
+            href="mailto:info@prashantjewellers.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-black hover:bg-gray-50 transition"
+          >
+            Email
+          </a>
+          <a
             href="https://wa.me/917597441777?text=Hi,+I+am+interested+in+your+jewellery+collection"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-black px-5 py-2 text-sm font-semibold text-white hover:bg-gray-800 transition"
           >
             WhatsApp

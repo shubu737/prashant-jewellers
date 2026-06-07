@@ -75,14 +75,14 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1573408301185-9519f94816b5?auto=format&fit=crop&w=800&q=80"
+                  src="/images/gold-necklaces/gold-necklaces-2.jpg"
                   alt="Jewellery store"
                   className="w-full h-44 object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80"
+                  src="/images/diamond-rings/diamond-rings-7.jpg"
                   alt="Jewellery showcase"
                   className="w-full h-44 object-cover"
                 />
