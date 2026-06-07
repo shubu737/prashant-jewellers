@@ -15,7 +15,7 @@ const reels: ReelItem[] = [
     title: "Jewellery story",
     caption: "A cinematic look at the design and emotion behind every piece.",
     video: "/videos/snapsave-app_3887463463161134240.mp4",
-    poster: "/images/diamond-earrings/diamond-earrings-1.jpg",
+    poster: "/images/diamond-earrings/diamond-earrings-2.jpg",
   },
   {
     title: "Gold craftsmanship",
@@ -27,7 +27,7 @@ const reels: ReelItem[] = [
     title: "Diamond setting",
     caption: "Precision stone setting with expert detail.",
     video: "/videos/snapsave-app_3878745675025974476.mp4",
-    poster: "/images/diamond-rings/diamond-rings-3.jpg",
+    poster: "/images/diamond-rings/diamond-rings-7.jpg",
   },
 ];
 
